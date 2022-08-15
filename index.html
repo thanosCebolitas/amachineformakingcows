@@ -21,23 +21,35 @@
     <link rel="stylesheet" href="ui.css">
     <style>
       html, body {
-        height: 100%;
+        height: 95%;
       }
       .fullSize {
         transition: all 0.4s;
         transition-delay: 0.4s;
         height: 100%;
-        overflow: none;
+        overflow: clip;
       }
 
       .minimise {
         height: 0;
       }
+
+      .cow {
+        animation: hue 5s infinite;
+        background-image: url('cow.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      @keyframes hue {
+        0%, 100%  { filter: hue-rotate(0deg); }
+        50% { filter: hue-rotate(180deg); }
+      }
     </style>
   </head>
 
   <body>
-    <div class="fullSize" style="background-image: url('cow.jpg'); background-repeat: no-repeat;">
+    <div class="fullSize cow">
     </div>
   </body>
 </html>
